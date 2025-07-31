@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Trigger Jenkins
         run: |
-          curl -u "${{ hari }}:${{ 1122672bd36d198f7341ea2cf57ebf2ec0 }}" \
+          curl -u "${{ Hariharan B }}:${{ 1122672bd36d198f7341ea2cf57ebf2ec0 }}" \
             -X POST "${{ https://free-piranha-fairly.ngrok-free.app }}/job/Postman CICD/build?token=testToken"

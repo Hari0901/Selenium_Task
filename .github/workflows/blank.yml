@@ -1,0 +1,15 @@
+name: Trigger Jenkins on Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  trigger:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins
+        run: |
+          curl -u "${{ hari }}:${{ 1122672bd36d198f7341ea2cf57ebf2ec0 }}" \
+            -X POST "${{ https://free-piranha-fairly.ngrok-free.app }}/job/Postman CICD/build?token=testToken"
